@@ -74,7 +74,15 @@ class Adapter(object):
 #             end_sequence=('Barcode_2_end', 'TTTTTTTTGGGGGGGGCCCCCCCCAAAAAAAA'))
 
 
-ADAPTERS = [Adapter('SQK-NSK007',
+ADAPTERS = [Adapter('PCR_ONE',
+                    start_sequence=('PCR_F_PRIMER','AGAGTTTGATCMTGGCTCAG'),
+                    end_sequence=('PCR_R_PRIMER_RC','AAGTCGTAACAAGGTAACCG')),
+
+            Adapter('PCR_TWO',
+                    end_sequence=('PCR_F_PRIMER_RC','CTGAGCCAKGATCAAACTCT'),
+                    start_sequence=('PCR_R_PRIMER','CGGTTACCTTGTTACGACTT')),
+
+            Adapter('SQK-NSK007',
                     start_sequence=('SQK-NSK007_Y_Top', 'AATGTACTTCGTTCAGTTACGTATTGCT'),
                     end_sequence=('SQK-NSK007_Y_Bottom', 'GCAATACGTAACTGAACGAAGT')),
 
